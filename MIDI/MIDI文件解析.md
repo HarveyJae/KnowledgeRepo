@@ -5,7 +5,7 @@
 - MIDI，Musical Instrument Digital Interface，音乐数字接口。
 - MIDI不发送声音，只发送像音调或音乐强度等数据，因此在不同的设备上，输出的声音也因音源器不同而有差异。
 
-![midi](C:\typoradata\工程\.image\midi.jfif)
+![midi](.image\midi.jfif)
 
 ### 二、MIDI文件格式
 
@@ -42,14 +42,14 @@ static uint32_t midi_be_to_uint32(const uint8_t *data)
 
 #### 2.2 MIDI结构
 
-![midi_struct](C:\typoradata\工程\.image\midi_struct.png)
+![midi_struct](.image\midi_struct.png)
 
 - MIDI文件中包含Header Chunk和Track Chunk两种类型，其中Header Chunk必须存在且仅为1，Track Chunk的数量>=1即可。
 - Header Chunk用来存储整个MIDI文件的通用数据；Track Chunk作为音轨，每个Track Chunk表示一个音轨(一条轨道)。
 
 #### 2.3 Header Chunk
 
-![midi_header_struct](C:\typoradata\工程\.image\midi_header_struct.png)
+![midi_header_struct](.image\midi_header_struct.png)
 
 ```c
 4D 54 68 64   /* Magic, MThd*/
@@ -96,7 +96,7 @@ static uint32_t midi_be_to_uint32(const uint8_t *data)
 
 #### 2.4 Track Chunk
 
-![midi_track_struct](C:\typoradata\工程\.image\midi_track_struct.png)
+![midi_track_struct](.image\midi_track_struct.png)
 
 ```c
 4D 54 72 6B                                     /* Magic,MTrk*/
@@ -431,7 +431,7 @@ static int midi_vql_to_uint32(uint8_t *eventstream, uint32_t eventstream_len, ui
 
 ### 四、MIDI音符编号表
 
-![midi_note_num](C:\typoradata\工程\.image\midi_note_num.png)
+![midi_note_num](.image\midi_note_num.png)
 
 ### 五、MIDI音符与频率
 
